@@ -1,0 +1,301 @@
+html {
+  background: url("../images/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin: 5px;
+  padding: 5px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "main main main main"
+    "about about about sidebar"
+    "contact contact contact sidebar"
+    "footer footer footer footer";
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+}
+
+nav {
+  background-color: black;
+  opacity: 75%;
+  grid-area: nav;
+  float: left;
+}
+
+nav ul {
+  list-style: none;
+  font-size: 16px;
+  font-weight: bolder;
+  float: left;
+}
+
+li {
+  display: inline-block;
+}
+
+li a {
+  color: #ffffff;
+}
+
+.left {
+  float: left;
+}
+
+.logo {
+  float: right;
+  vertical-align: middle;
+  width: 3%;
+}
+
+.logo img {
+  height: auto;
+  width: 100%;
+}
+
+a:hover {
+  color: #ff7f50;
+}
+
+main {
+  grid-area: main;
+  font-size: 24px;
+}
+
+main h2 {
+  font-weight: bolder;
+  color: black;
+}
+
+h2 {
+  font-weight: bolder;
+  color: black;
+}
+
+.sidebar {
+  background-color: #d3d4d7;
+  opacity: 65%;
+  grid-area: sidebar;
+}
+
+.about {
+  background-color: #d3d4d7;
+  color: black;
+  opacity: 65%;
+  grid-area: about;
+}
+
+.contact {
+  background: #bdbcbb;
+  color: black;
+  opacity: 65%;
+  grid-area: contact;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  opacity: 65%;
+  grid-area: footer;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+input[type="text"] {
+  width: 30%;
+}
+
+input[type="button"] {
+  margin: 5px;
+  width: 30%;
+  background: peru;
+
+  font-weight: bolder;
+}
+
+.cards {
+  padding: 70px 0;
+  margin: auto;
+  width: 80%;
+  background: rgba(116, 185, 255, 0.09);
+  text-align: center;
+}
+.main-cards {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+  margin: 30px 15px 0px 15px;
+}
+
+a.btn {
+  transition: all 0.5s;
+  text-decoration: none;
+  color: #fff;
+}
+.single-blog > img {
+  width: 100%;
+  transition: all 0.5s;
+}
+
+header {
+  width: 70%;
+  margin: 0 auto;
+}
+header h1 {
+  margin: 0;
+  font-size: 50px;
+  color: rgba(52, 73, 94, 1);
+  font-weight: 500;
+}
+.single-blog {
+  position: relative;
+  overflow: hidden;
+  max-height: 580px;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 10px #ccc;
+  transition: all 0.5s;
+}
+.singleBlog:hover {
+  box-shadow: 0 2px 13px #ccc;
+  transition: all 0.5s;
+}
+.singleBlog:hover img {
+  transform: scale(1.1);
+  transition: all 0.4s;
+}
+.blog-content {
+  position: absolute;
+  left: 0;
+  bottom: -45px;
+  width: 100%;
+  height: 50%;
+  color: #fff;
+  padding: 10px 5px;
+  background: linear-gradient(
+    45deg,
+    rgb(238, 157, 65) 0%,
+    rgba(240, 64, 41, 0.4) 100%
+  );
+  transition: all 0.5s;
+}
+.single-blog:hover .blog-content {
+  bottom: 0;
+  transition: all 0.5s;
+}
+
+.blog-content h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+.blog-content h3 span {
+  display: block;
+  font-size: 60%;
+  margin-top: 5px;
+  font-weight: 600;
+  color: rgba(52, 73, 94, 1);
+}
+
+.blog-content a {
+  font-size: 14px;
+  font-weight: 500;
+}
+.blog-content .btn {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  font-weight: 400;
+}
+.blog-content .btn:hover {
+  background: rgba(52, 152, 219, 1);
+  transition: all 0.5s;
+  text-decoration: none;
+}
+.blog-content a:hover {
+  text-decoration: underline;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas:
+      "nav"
+      "sidebar"
+      "main"
+      "about"
+      "contact"
+      "footer";
+  }
+
+  .logo img {
+    display: none;
+  }
+
+  nav {
+    background-color: gray;
+  }
+
+  body {
+    background-image: url("./background.png");
+
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  main p {
+    color: whitesmoke;
+    font-size: 5vw;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cards {
+    width: 80%;
+  }
+  .main-cards {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
